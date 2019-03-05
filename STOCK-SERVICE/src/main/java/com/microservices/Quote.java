@@ -1,0 +1,19 @@
+package com.microservices;
+
+public class Quote {
+	private String quote;
+
+	public String getQuote() {
+		return quote;
+	}
+
+	public void setQuote(String quote) {
+		this.quote = quote;
+	}
+
+	public Quote(String quote) {
+		super();
+		this.quote = quote;
+	}
+	
+}
