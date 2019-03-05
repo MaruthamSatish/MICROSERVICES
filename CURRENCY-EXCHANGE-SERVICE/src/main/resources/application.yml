@@ -1,0 +1,44 @@
+spring:
+ 
+  application:
+      name: currency-exchange-service
+  datasource:
+    hikari:
+     maximum-pool-size: 5
+     max-lifetime: 0
+    url: jdbc:mysql://localhost:3306/microservices
+    username: root
+    password: India@123
+  jpa: 
+   open-in-view: true
+   database: mysql
+   properties:
+    
+    show-sql: true 
+    hibernate:
+      ddl-auto: update
+      
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+  boot:
+    admin:
+      client:
+       url:
+        -   http://localhost:9999
+        
+ 
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+          defaultZone: http://localhost:8070/eureka/  
+  
+     
+ 
+server:
+  port: 8093
+ 
+
+ 
+

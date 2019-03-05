@@ -1,0 +1,17 @@
+
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///MICRO_SERVICE_FEB_19/Git-Config/
+       
+
+
+
+
+
+server:
+  port: 8888

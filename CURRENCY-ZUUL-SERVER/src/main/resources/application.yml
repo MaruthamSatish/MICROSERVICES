@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: currency-zuul-server
+  http:
+    encoding:
+      force: false
+      enabled: false
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:9999
+  security:
+    user:
+      name: root
+      password: root
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+          defaultZone: http://localhost:8070/eureka/
+          
+#zuul
+  #routes:
+    #foos:
+      #path: /currency-conversion-service/**
+     # url: http://localhost:9019/currency-converter-service/
+     
+management:  endpoints:    web:      exposure:        include:        - "*"
+      
+server:
+  port: 8023
