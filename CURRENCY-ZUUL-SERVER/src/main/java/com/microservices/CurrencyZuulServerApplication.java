@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @SpringBootApplication
@@ -18,16 +17,9 @@ public class CurrencyZuulServerApplication {
        public static void main(String[] args) {
 		SpringApplication.run(CurrencyZuulServerApplication.class, args);
 	}
-      
-       @RequestMapping("/")
-       public String home() {
-    	 logger.info("HIIIII");
-           return "Hello World";
-       }
-       @Bean
+     @Bean
        public CurrencyZuulFilter getCurrentFilter()
-       
-{
+     {
     	   return new CurrencyZuulFilter();
     	   }
        @Bean

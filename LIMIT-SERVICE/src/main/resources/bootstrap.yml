@@ -8,7 +8,7 @@ spring:
     
     url: jdbc:mysql://localhost:3306/microservices?autoReconnect=true&amp;characterEncoding=UTF-8&amp;useUnicode=true&amp;createDatabaseIfNotExist=true
     username: root
-    password: root
+    password: India@123
   jpa:
    database: mysql
    properties:
@@ -17,10 +17,10 @@ spring:
     hibernate:
       ddl-auto: update
       
-    database-platform: org.hibernate.dialect.MySQL5Dialect  cloud:    config:      uri: http://localhost:8888  profiles:    active:    - qa
+    database-platform: org.hibernate.dialect.MySQL5Dialect  cloud:    config:      uri: http://localhost:8888  profiles:    active:    - dev
       
    
-server:  port: 8070
+server:  port: 8071
 
     
     

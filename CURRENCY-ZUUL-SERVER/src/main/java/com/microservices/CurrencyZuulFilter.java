@@ -25,12 +25,12 @@ private Logger logger=LoggerFactory.getLogger(this.getClass());
 	}
 
 	public String filterType() {
-		// TODO Auto-generated method stub
+		
 		return "pre";
 	}
 
 	public int filterOrder() {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 

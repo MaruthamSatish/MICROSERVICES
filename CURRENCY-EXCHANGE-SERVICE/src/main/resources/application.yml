@@ -33,8 +33,15 @@ eureka:
     fetch-registry: true
     service-url:
           defaultZone: http://localhost:8070/eureka/  
-  
-     
+          
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #<2>
+  endpoint:
+    health:
+      show-details: ALWAYS
  
 server:
   port: 8093
